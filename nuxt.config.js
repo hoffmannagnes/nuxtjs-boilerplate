@@ -1,5 +1,5 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-export default defineNuxtConfig({
+export default {
   devtools: { enabled: true },
   routeRules: {
     // prerender index route by default
@@ -7,5 +7,8 @@ export default defineNuxtConfig({
   },
   modules: [
     '@nuxtjs/gtm'
-  ]
-});
+  ],
+  plugins: [
+    '~/plugins/gtm'
+   ]
+};
