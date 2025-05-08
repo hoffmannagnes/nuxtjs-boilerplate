@@ -5,10 +5,4 @@ export default {
     // prerender index route by default
     '/': { prerender: true },
   },
-  modules: [
-    '@nuxtjs/gtm'
-  ],
-  plugins: [
-    '~/plugins/gtm'
-   ]
 };
