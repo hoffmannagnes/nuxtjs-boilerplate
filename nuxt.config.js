@@ -5,23 +5,10 @@ export default defineNuxtConfig({
     // prerender index route by default
     '/': { prerender: true },
   },
-  modules: [
-    '@nuxtjs/gtm',
-  ],
+  modules: ['@nuxtjs/gtm'],
   gtm: {
-    id: 'GTM-K5SKJM3F', // Cseréld le a saját GTM azonosítódra
-    enabled: process.env.NODE_ENV === 'production', // Engedélyezze csak a produkciós környezetben
-    debug: true, // Csak fejlesztési környezetben, hogy lássuk az eseményeket
-    pageTracking: true,
+    id: 'GTM-K5SKJM3F',
+    enabled: true,
+    debug: true,
   },
-  app: {
-    head: {
-      script: [
-        {
-          src: 'https://www.googletagmanager.com/gtm.js?id=GTM-K5SKJM3F',
-          async: true
-        }
-      ]
-    }
-  }
 });
