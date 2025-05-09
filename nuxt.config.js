@@ -14,13 +14,21 @@ export default {
         async: true,
         src: 'https://www.googletagmanager.com/gtm.js?id=GTM-K5SKJM3F'
       },
-      {
-        hid: 'gtm-dataLayer',
-        innerHTML: `
-          window.dataLayer = window.dataLayer || [];
-        `,
-        type: 'text/javascript'
-      }
+       {
+          hid: 'gtag',
+          async: true,
+          src: 'https://www.googletagmanager.com/gtag/js?id=G-VVGNQ7QW93'
+        },
+        {
+          hid: 'gtag-config',
+          innerHTML: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-VVGNQ7QW93');
+          `,
+          type: 'text/javascript'
+        }
     ],
     __dangerouslyDisableSanitizers: ['script']
   }
