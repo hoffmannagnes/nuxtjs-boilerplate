@@ -5,24 +5,24 @@ export default {
     // prerender index route by default
     '/': { prerender: true },
   },
-  head: {
+  app: {
+    cdnURL: '/',
+   head: {
     script: [
       {
-        hid: 'gtag',
+        hid: 'gtm',
         async: true,
-        src: 'https://www.googletagmanager.com/gtag/js?id=G-E39NSFHYTT'
+        src: 'https://www.googletagmanager.com/gtm.js?id=GTM-K5SKJM3F'
       },
       {
-        hid: 'gtag-config',
+        hid: 'gtm-dataLayer',
         innerHTML: `
           window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'G-E39NSFHYTT'); // Az Analytics mérőkódod
         `,
         type: 'text/javascript'
       }
     ],
     __dangerouslyDisableSanitizers: ['script']
   }
+  },
 };
