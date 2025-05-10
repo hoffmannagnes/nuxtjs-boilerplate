@@ -1,8 +1,8 @@
 <template>
     <div class="container">
       <h1>Gombos oldal</h1>
-      <button @click="firstAction" data-tag="login">Regisztráció</button>
-      <button @click="secondAction" data-tag="registration">Login</button>
+      <button @click="firstAction" data-tag="login">Login</button>
+      <button @click="secondAction" data-tag="registration">Regisztráció</button>
     </div>
   </template>
   
