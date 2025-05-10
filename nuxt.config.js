@@ -12,7 +12,7 @@ export default {
       {
         hid: 'gtm',
         async: true,
-        src: 'https://www.googletagmanager.com/gtm.js?id=GTM-K5SKJM3F'
+        src: 'https://www.googletagmanager.com/gtm.js?id=GTM-K5SKJM3F',
       },
        {
           hid: 'gtag',
@@ -25,7 +25,7 @@ export default {
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'GT-MKP7JJ26');
+            gtag('config', 'GT-MKP7JJ26', { debug_mode: true });
           `,
           type: 'text/javascript'
         }
