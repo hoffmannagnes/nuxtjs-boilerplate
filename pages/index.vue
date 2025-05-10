@@ -1,20 +1,22 @@
 <template>
     <div class="container">
       <h1>Gombos oldal</h1>
-      <button @click="firstAction" data-tag="login">Login</button>
-      <button @click="secondAction" data-tag="registration">Regisztráció</button>
+      <button @click="firstAction" data-tag="login" id="login">Login</button>
+      <button @click="secondAction" data-tag="registration" id="registration">Regisztráció</button>
     </div>
   </template>
   
   <script setup>
 const firstAction = (event) => {
     const tag = event.target.getAttribute("data-tag");
-    sendEventToAnalytics(tag);
+     const buttonId = event.target.getAttribute("id");
+    sendEventToAnalytics(tag, buttonId);
 };
 
 const secondAction = (event) => {
     const tag = event.target.getAttribute("data-tag");
-    sendEventToAnalytics(tag);
+     const buttonId = event.target.getAttribute("id");
+    sendEventToAnalytics(tag, buttonId);
 };
 
 // Esemény küldése analitikához
